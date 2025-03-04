@@ -21,7 +21,11 @@ icon: material/home
 !!! info ""
 
     <div markdown align="center">
-    本站共有 `#!py {{ pages }}` 个页面，`#!py {{ words }}` 个字，`#!py {{ codes }}` 行代码，以及 `#!py {{ images }}` 张图片
+    ```python exec
+    import time
+
+    print(f"本站最后更新（构建）时间：`#!py {time.strftime("%Y-%m-%d %H:%M:%S %z", time.localtime())}`")
+    ```
     </div>
 
 <div align="center" markdown>

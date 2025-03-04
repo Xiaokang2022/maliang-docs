@@ -7,11 +7,18 @@ icon: material/book
 
 !!! warning "特别注意：教程版本要求"
 
-    目前此教程对应的环境如下：
+    目前此教程对应的环境如下（文档构建时自动更新）：
 
-    * maliang: `3.0.0`
-    * Python: `3.13.0`
-    * OS: `Windows 11 24H2`
+    ```python exec
+    import platform
+    import sys
+
+    import maliang
+
+    print(f"* maliang: `{maliang.__version__}`")
+    print(f"* Python: `{sys.version[:6]}`")
+    print(f"* OS: `{platform.system()}`")
+    ```
 
     若您需要的教程不是该版本，请在网页左上切换版本！
 
