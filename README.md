@@ -12,4 +12,5 @@ Official documentation website of the package [`maliang`](https://github.com/Xia
 </p>
 
 > [!TIP]  
-> **Homepage:** https://xiaokang2022.github.io/maliang-docs/
+> **Homepage:** https://xiaokang2022.github.io/maliang-docs/  
+> **Mirror:** https://maliang-docs.netlify.app/

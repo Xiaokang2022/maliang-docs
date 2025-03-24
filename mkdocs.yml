@@ -91,9 +91,9 @@ markdown_extensions:
       nbsp: true # 空格转义会变成无间隔空格 &nbsp;
 
   - pymdownx.magiclink: # 魔术链接，自动识别链接
-      user: "" # 可缺省的用户名（默认值）
-      repo: "" # 可缺省的仓库名（默认值）
-      hide_protocol: false # 隐藏链接协议头（默认值）
+      user: "Xiaokang2022" # 可缺省的用户名
+      repo: "maliang" # 可缺省的仓库名
+      hide_protocol: true # 隐藏链接协议头
       repo_url_shorthand: true # 识别仓库提交等链接
       repo_url_shortener: true # 仓库提交等链接简短显示
       social_url_shorthand: true # 识别社交账号等链接
