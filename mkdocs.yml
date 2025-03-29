@@ -325,6 +325,10 @@ plugins:
       minify_html: true
       htmlmin_opts:
         remove_comments: true
+  - print-site:
+      print_page_title: Documentation
+      enumerate_headings: false
+      enumerate_figures: false
 
 nav:
   - 站点主页:

@@ -9,6 +9,7 @@ mkdocs-rss-plugin
 mkdocs-autorefs
 mkdocs-gen-files
 mkdocs-literate-nav
+mkdocs-print-site-plugin
 mkdocstrings[python]
 markdown-exec[ansi]
 mike
