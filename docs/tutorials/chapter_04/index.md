@@ -11,6 +11,8 @@ comments: true
 
     本章会详细说明如何使用 `maliang` 来做出一些基本的动画。
 
+    既然 `tkinter` 没有动画，就让 `maliang` 来弥补吧！
+
 ## 本章内容
 
 * [4.1 基础动画](1.md)
