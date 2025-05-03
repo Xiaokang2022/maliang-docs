@@ -28,11 +28,11 @@ https://github.com/squidfunk/mkdocs-material */
     padding: 0em 0em 0em 0em;
     counter-increment: page;
 
-    @bottom-center {
+    /* @bottom-center {
         content: string(chapter);
     }
     @bottom-right {
         content: 'Page ' counter(page);
-    }
+    } */
 
 }
