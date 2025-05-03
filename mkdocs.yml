@@ -327,6 +327,7 @@ plugins:
         remove_comments: true
   - print-site:
       print_page_title: Documentation
+      print_page_basename: downloads
       enumerate_headings: false
       enumerate_figures: false
 
