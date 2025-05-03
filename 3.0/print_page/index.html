@@ -3538,7 +3538,7 @@
 </div>
 <div class="admonition info">
 <p><div markdown align="center">
-<p>本站最后更新（构建）时间：<code class="language-py highlight"><span class="mi">2025</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">03</span> <span class="mi">04</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">35</span> <span class="o">+</span><span class="mi">0800</span></code></p>
+<p>本站最后更新（构建）时间：<code class="language-py highlight"><span class="mi">2025</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">03</span> <span class="mi">15</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mi">07</span> <span class="o">+</span><span class="mi">0800</span></code></p>
 </div></p>
 </div>
 <div align="center">
@@ -5701,18 +5701,18 @@ y=f(x), x\in[0, 1]
 <p>如果你需要往返运动效果的控制函数，那么请将参数 <code>map_y</code> 设为 <code>False</code>。一旦你没有这样做，假设你的最终值为 0，那么将导致映射时其它值被映射到 <span class="arithmatex">\(+\infty\)</span>，使得动画不可见了。</p>
 </div>
 <p>这里将内置控制函数 <code>rebound</code> 作为示例，讲讲它是怎么生成的。首先，下面是它的函数实现：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-1">1</a></span>
+<div class="language-python blur highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">rebound</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Before the end, displacement will bounce off a bit.</span>
+<span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="hll"><span class="k">def</span> <span class="nf">rebound</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+</span></span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Before the end, displacement will bounce off a bit.</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="sd">    * `t`: the percentage of time</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">return</span> <span class="n">generate</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="hll">    <span class="k">return</span> <span class="n">generate</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
+</span></span></code></pre></div></td></tr></table></div>
 <p>可以看见，它实际上就是取正弦函数 0 到 <span class="arithmatex">\(\frac{\pi+1}{2}\)</span> 范围内，并约束最终值为 1 的函数。它听起来有点复杂，实际数学表达式如下：</p>
 <div class="arithmatex">\[
 y=\frac{\sin\frac{\pi+1}{2}x}{\sin\frac{\pi+1}{2}}, x\in[0, 1]
@@ -5720,32 +5720,32 @@ y=\frac{\sin\frac{\pi+1}{2}x}{\sin\frac{\pi+1}{2}}, x\in[0, 1]
 <p>确实比较复杂，但用控制函数生成器写出来却十分简洁。</p>
 <h3 id="tutorials-chapter_04-2-22-完全自定义">2.2 完全自定义<a class="headerlink" href="#tutorials-chapter_04-2-22-完全自定义">¶</a></h3>
 <p>所谓完全自定义，实际就是不借助控制函数生成器，直接定义的控制函数，一般是控制函数足够简单，或者是有特殊需求的情况下才会使用。典型的如内置控制函数 <code>linear</code>，下面是它的函数实现：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-1">1</a></span>
+<div class="language-python blur highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">linear</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Speed remains the same.</span>
+<span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="hll"><span class="k">def</span> <span class="nf">linear</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+</span></span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Speed remains the same.</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="sd">    * `t`: the percentage of time</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="k">return</span> <span class="n">t</span>
-</span></code></pre></div></td></tr></table></div>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="hll">    <span class="k">return</span> <span class="n">t</span>
+</span></span></code></pre></div></td></tr></table></div>
 <p>由于它非常简单，所以没必要使用控制函数生成器。</p>
 <p>又比如内置控制函数 <code>smooth</code>，下面是它的函数实现：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-1">1</a></span>
+<div class="language-python blur highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-4">4</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">smooth</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Speed is slow first, then fast and then slow. (slow -&gt; fast -&gt; slow)</span>
+<span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="hll"><span class="k">def</span> <span class="nf">smooth</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+</span></span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Speed is slow first, then fast and then slow. (slow -&gt; fast -&gt; slow)</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="sd">    * `t`: the percentage of time</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
-</span></code></pre></div></td></tr></table></div>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
+</span></span></code></pre></div></td></tr></table></div>
 <p>它看起来并不是那么简单，但把它转化成控制函数生成器的写法是这样的：</p>
 <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-2-__codelineno-3-2">2</a></span>
@@ -5757,8 +5757,8 @@ y=\frac{\sin\frac{\pi+1}{2}x}{\sin\frac{\pi+1}{2}}, x\in[0, 1]
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="sd">    * `t`: the percentage of time</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="k">return</span> <span class="n">generate</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll">    <span class="k">return</span> <span class="n">generate</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)(</span><span class="n">t</span><span class="p">)</span>
+</span></span></code></pre></div></td></tr></table></div>
 <p>这个用控制函数生成器反而又显得复杂了，所以也是直接采用完全自定义的。完全自定义还有助于实现分段函数这样的控制函数。总之，借助控制函数，我们可以实现许多有趣的动画。</p>
 <h2 id="tutorials-chapter_04-2-三使用多个控制函数">三、使用多个控制函数<a class="headerlink" href="#tutorials-chapter_04-2-三使用多个控制函数">¶</a></h2>
 <p>或许你会有同时控制一个对象在水平方向和竖直方向运动的需求，但很遗憾，<code>maliang</code> 的动画类并不支持使用多个控制函数。但是呢，这并不限制我们使用多个动画类来实现类似的需求呀！</p>
@@ -5868,7 +5868,7 @@ y=\frac{\sin\frac{\pi+1}{2}x}{\sin\frac{\pi+1}{2}}, x\in[0, 1]
 <h2 id="tutorials-chapter_04-3-二自定义动画类">二、自定义动画类<a class="headerlink" href="#tutorials-chapter_04-3-二自定义动画类">¶</a></h2>
 <p>所谓自定义动画类，实际上就是通过继承动画基类并具化为自己需要的类。可以把内置的那些基础动画类作为参考，实现属于自己需要的动画类。当然，若是需求比较简单，那还是直接调用动画基类就好。</p>
 <p>下面看一下内置基础动画类 <code>MoveWidget</code> 的源代码：</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-1"> 1</a></span>
+<div class="language-python blur highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-4"> 4</a></span>
@@ -5897,22 +5897,22 @@ y=\frac{\sin\frac{\pi+1}{2}x}{\sin\frac{\pi+1}{2}}, x\in[0, 1]
 <span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-27">27</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-28">28</a></span>
 <span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-29">29</a></span>
-<span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">MoveWidget</span><span class="p">(</span><span class="n">Animation</span><span class="p">):</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Animation of moving `virtual.Widget`.&quot;&quot;&quot;</span>
+<span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-1-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="hll"><span class="k">class</span> <span class="nc">MoveWidget</span><span class="p">(</span><span class="n">Animation</span><span class="p">):</span>
+</span></span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Animation of moving `virtual.Widget`.&quot;&quot;&quot;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="bp">self</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="n">widget</span><span class="p">:</span> <span class="n">virtual</span><span class="o">.</span><span class="n">Widget</span><span class="p">,</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="n">offset</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="n">duration</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>        <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="n">controller</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">controllers</span><span class="o">.</span><span class="n">linear</span><span class="p">,</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>        <span class="n">end</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[],</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>        <span class="n">fps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>        <span class="n">repeat</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>        <span class="n">repeat_delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll">        <span class="bp">self</span><span class="p">,</span>
+</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="hll">        <span class="n">widget</span><span class="p">:</span> <span class="n">virtual</span><span class="o">.</span><span class="n">Widget</span><span class="p">,</span>
+</span></span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="hll">        <span class="n">offset</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+</span></span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="hll">        <span class="n">duration</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+</span></span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="hll">        <span class="o">*</span><span class="p">,</span>
+</span></span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="hll">        <span class="n">controller</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">controllers</span><span class="o">.</span><span class="n">linear</span><span class="p">,</span>
+</span></span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="hll">        <span class="n">end</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Callable</span><span class="p">[[],</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="hll">        <span class="n">fps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+</span></span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="hll">        <span class="n">repeat</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="hll">        <span class="n">repeat_delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="hll">    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="sd">        * `widget`: the `virtual.Widget` to be moved</span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="sd">        * `offset`: relative offset of the coordinates</span>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="sd">        * `duration`: duration of the animation, in milliseconds</span>
@@ -5922,12 +5922,12 @@ y=\frac{\sin\frac{\pi+1}{2}x}{\sin\frac{\pi+1}{2}}, x\in[0, 1]
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="sd">        * `repeat`: number of repetitions of the animation</span>
 </span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="sd">        * `repeat_delay`: length of the delay before the animation repeats</span>
 </span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>        <span class="n">Animation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a>            <span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">widget</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">offset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="n">offset</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">p</span><span class="p">),</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a>            <span class="n">controller</span><span class="o">=</span><span class="n">controller</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">fps</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">repeat</span><span class="p">,</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a>            <span class="n">repeat_delay</span><span class="o">=</span><span class="n">repeat_delay</span><span class="p">,</span> <span class="n">derivation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a>        <span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="hll">        <span class="n">Animation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+</span></span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="hll">            <span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">widget</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">offset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="n">offset</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">p</span><span class="p">),</span>
+</span></span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="hll">            <span class="n">controller</span><span class="o">=</span><span class="n">controller</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">fps</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="n">repeat</span><span class="p">,</span>
+</span></span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="hll">            <span class="n">repeat_delay</span><span class="o">=</span><span class="n">repeat_delay</span><span class="p">,</span> <span class="n">derivation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="hll">        <span class="p">)</span>
+</span></span></code></pre></div></td></tr></table></div>
 <p>看起来很多，实际核心内容就一点点。当然，我们自己定义属于自己的动画类时并不需要像上面这样写得如此繁琐。</p>
 <p>比如，我们写一个这样的动画类：</p>
 <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#tutorials-chapter_04-3-__codelineno-2-1"> 1</a></span>
