@@ -63,7 +63,9 @@ icon: material/book
 ![light](images/0-1.light.png#only-light)
 ![dark](images/0-1.dark.png#only-dark)
 
-<p align="center"><small>图1 在 VSCode 中查看类的文档字符串</small></p>
+/// figure-caption
+在 VSCode 中查看类的文档字符串
+///
 
 ## 二、想说的一些事情
 
