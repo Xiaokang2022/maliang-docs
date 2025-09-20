@@ -7,6 +7,7 @@ import typing
 import maliang
 import maliang.media
 import maliang.mpl
+import maliang.table
 import maliang.three
 import mkdocs_gen_files
 
@@ -26,6 +27,8 @@ def get_data(values: str, /) -> tuple[str, str]:
         return "maliang-mpl", maliang.mpl.__version__
     if "three" in values:
         return "maliang-three", maliang.three.__version__
+    if "table" in values:
+        return "maliang-table", maliang.table.__version__
     return "maliang", maliang.__version__
 
 

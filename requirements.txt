@@ -5,18 +5,28 @@ mkdocs-git-committers-plugin-2
 mkdocs-git-revision-date-localized-plugin
 mkdocs-statistics-plugin
 mkdocs-minify-plugin
+mkdocs-macros-plugin
 mkdocs-rss-plugin
 mkdocs-autorefs
 mkdocs-gen-files
 mkdocs-literate-nav
 mkdocs-print-site-plugin
-mkdocstrings[python]
+mkdocstrings
+mkdocstrings-python
 markdown-exec[ansi]
 mike
+ruff
 
+# official mkdocstrings extensions
+griffe-inherited-docstrings
+griffe-pydantic
+griffe-typingdoc
+griffe-warnings-deprecated
+
+# third-party mkdocstrings extensions
+griffe-modernized-annotations
+
+# package
 maliang
 maliang[opt]
 maliang[ext]
-
-# griffe-typingdoc
-# griffe-pydantic
