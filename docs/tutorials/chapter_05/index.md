@@ -1,6 +1,5 @@
 ---
 comments: true
-status: new
 ---
 
 # 第五章：颜色
