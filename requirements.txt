@@ -39,13 +39,15 @@ mkdocs-literate-nav
 ruff
 
 # official griffe extensions
+griffe-autodocstringstyle
 griffe-inherited-docstrings
+griffe-public-redundant-aliases
+griffe-public-wildcard-imports
 griffe-pydantic
+griffe-runtime-objects
+griffe-sphinx
 griffe-typingdoc
 griffe-warnings-deprecated
-
-# third-party griffe extensions
-griffe-modernized-annotations
 
 # package to be documented
 maliang

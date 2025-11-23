@@ -166,30 +166,49 @@ theme: # 此项各个设定因主题而异
   custom_dir: docs/overrides # 覆盖目录
   language: zh # 主题语言
   features:
-    # - header.autohide # 顶栏自动隐藏
-    - announce.dismiss # 公告栏可以被关闭
-    - search.share # 搜索栏分享按钮
-    - search.suggest # 搜索栏内容建议
-    - search.highlight # 搜索栏内容高亮
-    - content.action.edit # 允许页面被编辑（会出现编辑按钮）
-    - content.action.view # 允许查看页面的源代码（会出现查看源代码按钮）
-    - content.tooltips # 提示框（以前有的样式变好看了，此外还支持更高级的提示框语法）
-    - content.code.copy # 例如：``` python { .yaml .copy } 默认开启，{ .yaml .no-copy } 关闭
-    - content.code.annotate # 允许内联代码注释
-    - content.tabs.link # 同样的标签，整个网站的同步切换，如 C -> C++，则其它类似的全部标签都同步切换
-    - navigation.top # 回到顶部的按钮
-    - navigation.tracking # 锚点跟踪
-    - navigation.footer # 页面底下换页的支持
-    - navigation.indexes # 左侧边栏大节点是否可以被导向到 index.md，可以不写，但不能没有
+    # Setting up navigation
     - navigation.instant # 页面不会重复加载（已加载页面不会再次加载）
+    - navigation.instant.prefetch  # 鼠标移到的链接会提前加载
     - navigation.instant.progress # 加载速度慢时，在页面顶部显示加载进度（400ms 以上加载时间才会显示它）
+    # - navigation.instant.preview  # 为全局标题启用即时预览，添加属性 data-preview 到标题可单独启用
+    - navigation.tracking # 锚点跟踪
     - navigation.tabs # 页面顶部导航栏
     # - navigation.tabs.sticky # 导航栏标题栏位置固定
     # - navigation.sections # 左侧边栏节点是否保持展开
     # - navigation.expand # 左侧边栏节点默认全部展开（与 navigation.prune 不兼容）
+    - navigation.path  # 导航栏面包屑导航
     # - navigation.prune # 左侧栏节点至多展开一个，以此来减小站点的构建大小（对于页数100+的网站很有用，与 navigation.expand 不兼容）
+    - navigation.indexes # 左侧边栏大节点是否可以被导向到 index.md，可以不写，但不能没有
+    - toc.follow # 锚点跟随，侧边栏自动滚动，使锚点总是可见
     # - toc.integrate # 右边侧栏是否集成到左侧边栏（与 navigation.indexes 不兼容）
-    - toc.follow # 锚点关注，侧边栏自动滚动，使锚点总是可见
+    - navigation.top # 回到顶部的按钮
+
+    # Setting up site search
+    - search.suggest # 搜索栏内容建议
+    - search.highlight # 搜索栏内容高亮
+    - search.share # 搜索栏分享按钮
+
+    # Setting up the header
+    # - header.autohide # 顶栏自动隐藏
+    - announce.dismiss # 公告栏可以被关闭
+
+    # Setting up the footer
+    - navigation.footer # 页面底下换页的支持
+
+    # Adding a git repository
+    - content.action.edit # 允许页面被编辑（会出现编辑按钮）
+    - content.action.view # 允许查看页面的源代码（会出现查看源代码按钮）
+
+    # Code blocks
+    - content.code.copy # 例如：``` python { .yaml .copy } 默认开启，{ .yaml .no-copy } 关闭
+    - content.code.select  # 选择按钮
+    - content.code.annotate # 允许内联代码注释
+
+    # Content tabs
+    - content.tabs.link # 同样的标签，整个网站的同步切换，如 C -> C++，则其它类似的全部标签都同步切换
+
+    # Footnotes
+    - content.tooltips # 提示框（以前有的样式变好看了，此外还支持更高级的提示框语法）
   palette: # 界面整体样式
     - media: "(prefers-color-scheme)" # 系统主题
       toggle:
@@ -363,31 +382,55 @@ plugins:
             - https://docs.python.org/3/objects.inv
             - https://pillow.readthedocs.io/en/stable/objects.inv
           options:
-            show_bases: true
+            # General
+            backlinks: tree
+            show_inheritance_diagram: true
             show_source: false
-            heading_level: 2
+
+            # Headings
             parameter_headings: true
+            show_root_full_path: false
             show_symbol_type_heading: true
             show_symbol_type_toc: true
+
+            # Members
             members_order: source
+            filters: public
             summary: true
+
+            # Docstrings
+            docstring_style: auto
             docstring_section_style: spacy
-            separate_signature: true
-            show_signature_annotations: true
-            annotations_path: source
-            line_length: 100
-            overloads_only: true
             merge_init_into_class: true
+            relative_crossrefs: true
+            scoped_crossrefs: true
+            show_if_no_docstring: true
+
+            # Signatures
+            line_length: 80
+            modernize_annotations: true
+            overloads_only: true
+            show_signature_annotations: true
+            show_signature_type_parameters: true
+            separate_signature: true
             signature_crossrefs: true
-            filters: ["!^_"]
-            show_root_full_path: false
+
+            # Extensions
             extensions:
-              - griffe_inherited_docstrings:
+              # Built-in
+              - dataclasses
+              - unpack_typeddict
+              # Official
+              - griffe_autodocstringstyle
+              - griffe_inherited_docstrings
+              - griffe_public_redundant_aliases
+              - griffe_public_wildcard_imports
               - griffe_pydantic:
                   schema: true
-              - griffe_typingdoc:
-              - griffe_warnings_deprecated:
-              - griffe_modernized_annotations:
+              - griffe_runtime_objects
+              - griffe_sphinx
+              - griffe_typingdoc
+              - griffe_warnings_deprecated
   - minify:
       minify_html: true
       htmlmin_opts:
